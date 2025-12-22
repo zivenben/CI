@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  web:
+    image: nginx
+    networks:
+      - holy
+    depends-on:
+      - web-2
+    ports: "8080:80"
+  web-2:
+    image: nginx
+    networks:
+      - holy
+    ports: "8080:80"
+networks:
+  holy:
+
