@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
       - name: Build Docker file
         run: docker build -t my-first-ci-image .
 
