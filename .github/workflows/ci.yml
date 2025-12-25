@@ -8,5 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
-        run: echo "CI работает брат!"
+      - name: Checkout code
+        uses: action/checkout@v4
+      - name: Build Docker file
+        run: docker build -t my-first-ci-image .
+
