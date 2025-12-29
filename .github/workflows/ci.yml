@@ -12,9 +12,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Build Docker file
         run: docker build -t my-first-ci-image .
-jobs:
-  build:
-    steps:
       - name: Run container
         run: docker run -d --name test_app myapp
       - name: Ckeck container is running
